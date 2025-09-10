@@ -2,10 +2,11 @@ import { Hero } from "@/components/home/hero";
 import { SocialIcons } from "@/components/home/social-icons";
 import { Categories } from "@/components/home/categories";
 import { LatestPosts } from "@/components/home/latest-posts";
-import { getCategories } from "@/lib/queries";
+import { getCategories, getAllPosts } from "@/lib/queries";
 
 export default async function Home() {
 
+  const { posts } = await getAllPosts();
   const categories = await getCategories();
 
   return (
@@ -13,7 +14,7 @@ export default async function Home() {
       <Hero />
       <SocialIcons />
       <Categories categories={categories}/>
-      <LatestPosts />
+      <LatestPosts posts={posts}/>
     </div>
   );
 }

@@ -67,3 +67,12 @@ export interface ExtendedPost extends Post {
     thumbnail_url: string;
   }
 }
+
+export type LatestsPostsProps = {
+    posts: Post[],
+    currentPage?: number,
+    totalPages?: number,
+    title?: string,
+    searchTerm?: string,
+    categories?: number
+}
