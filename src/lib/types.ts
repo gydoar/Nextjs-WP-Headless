@@ -26,8 +26,11 @@ export type Post = {
         rendered: string;
     };
     author: number;
-    categories: number;
+    categories: number[];
     featured_media: number;
+    acf: {
+      country: string
+    };
 }
 
 // Yoast metadata
@@ -75,4 +78,11 @@ export type LatestsPostsProps = {
     title?: string,
     searchTerm?: string,
     categories?: number
+}
+
+export type Author = {
+    id: number;
+    name: string;
+    slug: string;
+    link: string;
 }

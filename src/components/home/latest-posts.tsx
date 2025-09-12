@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Post, LatestsPostsProps } from "@/lib/types";
+import { SearchBar } from "@/components/home/search-bar";
 
 export async function LatestPosts({
   title,
@@ -23,7 +24,7 @@ export async function LatestPosts({
           <h2 className="text-xl mb-4">Latest Posts</h2>
         )}
 
-        <div>Search bar</div>
+        <SearchBar/>
       </div>
 
       <div className="flex flex-col mb-4">
