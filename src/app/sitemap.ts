@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllPosts} from '@/lib/queries';
 
-const baseUrl = process.env.WORDPRESS_URL;
+const baseUrl = process.env.WEBSITE_URL;
 
 export const revalidate = 3600;
  

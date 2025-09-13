@@ -21,7 +21,7 @@ export async function generateMetadata(
         title: post?.title.rendered,
         description: post?.excerpt.rendered,
         openGraph:{
-            images:['/open-graph.jpg', ...previousImages]
+            images:['/open-graph.png', ...previousImages]
         }
     }
 }
